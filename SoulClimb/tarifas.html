@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		Web
+	</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="custom.css">
+</head>
+
+<body class="bg-dark bg-gradient">
+
+	<header>
+		<!--navegador nav, usamos la clase navbar, navbar tiene sombra por el "shadow",
+		 colapsa cuando es menor al tamaño grande(lg) por "navbar-expand-lg"-->
+		<nav class="navbar navbar-expand-xl shadow bg-black navbar-dark text-bg-dark">
+			<div class="container-fluid">
+				<!--navbar-brand se usa para crear el logotipo o el título de la barra de navegación-->
+				<a class="navbar-brand" href="Web.html"><img src="img/logo-Soul-Climb1.png" height="60px"
+						class="mx-xl-5"></a>
+				<!--button class="navbar-toggler" se usa para cambiar entre la vista colapsada y expandida de la barra de navegación-->
+				<!--data-bs-toggle="collapse" indica que van a hacer los elementos(en este caso colapsarse) y data-bs-target indica que elementos
+				se van a hacerlo(por eso lo unimos a un id conectado con el div que contendra los elementos del navbar que queremos que desaparezcan)-->
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#elementos">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<!--colapsa todo el div-->
+				<div class="collapse navbar-collapse" id="elementos">
+					<ul class="navbar-nav">
+						<!--nav-item para introducir un enlace dentro, con un enlace activo-->
+						<li class="nav-item">
+							<a class="nav-link" href="Web.html">A escalar!</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="tarifas.html">Tarifas</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="kids.html">Kids</a>
+						</li>
+						<!--clase dropdown-->
+						<li class="nav-item dropdown d-flex align-items-center">
+							<!--por dropdown-toggle al clicar este botón se despliega el menu-->
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+								Servicios
+							</a>
+							<!--nueva lista con dropdown-menu y dropdown-items-->
+							<ul class="dropdown-menu bg-black text-bg-dark bg-gradient">
+								<li><a class="dropdown-item text-white" href="#">Cafetería</a></li>
+								<li><a class="dropdown-item text-white" href="tarifas.html#alquiler">Alquiler de
+										material</a></li>
+								<li><a class="dropdown-item text-white" href="#">Tienda</a></li>
+								<li><a class="dropdown-item text-white" href="#">Objetos perdidos</a></li>
+								<!--del main-->
+								<li><a class="dropdown-item text-white" href="#">Tarjeta de regalo</a></li>
+								<!--del tarifa-->
+
+								<li><a class="dropdown-item text-white" href="kids.html#cumpleaños">Cumpleaños</a></li>
+								<!--del kids-->
+							</ul>
+						</li>
+				</div>
+				<!--no colapsa todo el div-->
+				<div class="navbar-collapse">
+					<!--nav-item para introducir un enlace dentro, con un enlace desactivo, con el tabindex="-1" el raton no puede pasar por encima-->
+					<ul class="navbar-nav">
+						<li class="nav-item" data-bs-toggle="show">
+							<a class="nav-link disabled text-white-50" href="#" tabindex="-1">Antiguo Indoorwall
+								Leganés, nuevo Soul Climb</a>
+						</li>
+					</ul>
+				</div>
+				<!--colapsa todo el div, flex-row-reverse se usa para pegar el elemento a la derecha-->
+				<div class="collapse navbar-collapse my-2 flex-row-reverse" id="elementos">
+					<!--formulario-->
+					<form class="d-flex">
+						<input class="form-control" type="search" placeholder="Buscador">
+						<button class="btn hover" type="submit"><i class="bi bi-search text-light"></i></button>
+					</form>
+				</div>
+
+			</div>
+		</nav>
+	</header>
+
+
+	<div>
+		<h1 class="text-center text-info my-5">Nuestras tarifas</h1>
+	</div>
+
+	<div class="row container-fluid mx-auto">
+		<div class="col-xl-3 col-md-6 col-xs-12 mb-4">
+			<div class="card h-100 bg-transparent text-white">
+				<img src="img/tarifas/entrada libre adulto.jpg" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">Acceso por libre</h5>
+					<h6 class="text-info">Sala adultos</h6>
+					<ul class="card-text list-group list-group-flush">
+						<li class="list-group-item bg-transparent text-white-50">Entrada <p
+								class="position-absolute top-50 start-100 translate-middle">9.90€</p>
+						</li>
+						<li class="list-group-item bg-transparent text-white-50">Bono 10 <p
+								class="position-absolute top-50 start-100 translate-middle">89€</p>
+						</li>
+						<li class="list-group-item bg-transparent text-white-50">Socio mes <p
+								class="position-absolute top-50 start-100 translate-middle">45€</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col-xl-3 col-md-6 col-xs-12 mb-4">
+			<div class="card h-100 bg-transparent text-white">
+				<img src="img/tarifas/entrada libre soulkids.jpg" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">Acceso por libre</h5>
+					<h6 class="text-info">Sala soulkid</h6>
+					<ul class="card-text list-group list-group-flush">
+						<li class="list-group-item bg-transparent text-white-50">Entrada Kid <p
+								class="position-absolute top-50 start-100 translate-middle">7€</p>
+						</li>
+						<li class="list-group-item bg-transparent text-white-50">Entrada Kid premium<p
+								class="position-absolute top-50 start-100 translate-middle">9.80€</p>
+						</li>
+						<li class="list-group-item bg-transparent text-white-50">Entrada Adulto <p
+								class="position-absolute top-50 start-100 translate-middle">8€</p>
+						</li>
+						<li class="list-group-item bg-transparent text-white-50">Entrada Adulto premium<p
+								class="position-absolute top-50 start-100 translate-middle">10€</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col-xl-3 col-md-6 col-xs-12 mb-4">
+			<div class="card h-100">
+				<img src="img/tarifas/entrenamiento dirigido.jpg" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">Entrenamiento dirigido</h5>
+					<h6 class="text-info">Adultos</h6>
+					<ul class="card-text list-group list-group-flush">
+						<li class="list-group-item text-black-50">1 día/semana <p
+								class="position-absolute top-50 start-100 translate-middle">28€/mes</p>
+						</li>
+						<li class="list-group-item bg-transparent text-black-50">1 día/semana <p
+								class="position-absolute top-50 start-100 translate-middle">54€/mes</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col-xl-3 col-md-6 col-xs-12 mb-4">
+			<div class="card h-100">
+				<img src="img/tarifas/escuela escalada soulkids.jpg" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">Escuela de escalada</h5>
+					<h6 class="text-info">SoulKids</h6>
+					<ul class="card-text list-group list-group-flush">
+						<li class="list-group-item bg-transparent text-black-50">1 día/semana <p
+								class="position-absolute top-50 start-100 translate-middle">43€/mes</p>
+						</li>
+						<li class="list-group-item bg-transparent text-black-50">1 día/semana <p
+								class="position-absolute top-50 start-100 translate-middle">53€/mes</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<section class="container mt-5" id="formulario">
+
+
+		<h1 class="title text-center text-info pt-5">Hazte socio</h1>
+		<form>
+			<div class="row">
+				<div class="col-xl-3 col-md-6 my-5">
+					<!--form-control-plaintext le quita el estilo-->
+					<input type="text"
+						class="text-white form-control-plaintext border-bottom border-top-0 border-info bg-transparent"
+						id="nombre" required>
+					<label class="label text-info" for="nombre">Nombre</label>
+				</div>
+				<div class="col-xl-3 col-md-6 my-5">
+					<input type="text"
+						class="text-white form-control-plaintext border-bottom border-top-0 border-info bg-transparent"
+						id="apellido1" required>
+					<label class="label text-info" for="apellido1">Primer apellido</label>
+				</div>
+				<div class="col-xl-3 col-md-6 my-5">
+					<input type="text"
+						class="text-white form-control-plaintext border-bottom border-top-0 border-info bg-transparent"
+						id="apellido2" required>
+					<label class="label text-info" for="apellido2">Segundo apellido</label>
+				</div>
+				<div class="col-xl-3 col-md-6 my-5">
+					<input type="text"
+						class="text-white form-control-plaintext border-bottom border-top-0 border-info bg-transparent"
+						id="tel" required>
+					<label class="label text-info" for="tel">Número de teléfono</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-4 my-5">
+					<!--form-control-plaintext le quita el estilo-->
+					<input type="text"
+						class="text-white form-control-plaintext border-bottom border-top-0 border-info bg-transparent"
+						id="email" required>
+					<label class="label text-info" for="email">Email</label>
+				</div>
+				<div class="col-xl-4 my-5">
+					<input type="text"
+						class="text-white form-control-plaintext border-bottom border-top-0 border-info bg-transparent"
+						id="postal" required>
+					<label class="label text-info" for="postal">Dirección postal</label>
+				</div>
+				<div class="col-xl-4 my-5">
+					<input type="text"
+						class="text-white form-control-plaintext border-bottom border-top-0 border-info bg-transparent"
+						id="redes" required>
+					<label class="label text-info" for="redes">Redes sociales</label>
+				</div>
+			</div>
+
+
+			<div class="row">
+
+				<!--input-group-sm-->
+				<div class="col-xl-5 col-md-12 my-5 input-group-sm">
+					<select class="form-select text-white bg-dark border-info mt-2" id="modalidad">
+						<option value="1">Socio mes alumno</option>
+						<option value="2">Socio mes no alumno</option>
+					</select>
+					<label class="label text-info" for="modalidad">Elige la modalidad</label>
+				</div>
+				<div class="col-xl-5 col-md-8 my-5 input-group-sm">
+					<select class="form-select text-white bg-dark border-info mt-2" id="alquiler">
+						<option value="1">Si</option>
+						<option value="2">No</option>
+					</select>
+					<label class="label text-info" for="alquiler">Incluir alquiler de material</label>
+				</div>
+				<div class="col-xl-2 col-md-4 my-5">
+					<!--readonly no te permite cambiar el valor más-->
+					<input type="text"
+						class="text-white form-control-plaintext border-bottom border-top-0 border-info bg-transparent"
+						id="membresía" value="Mensual" readonly>
+					<label class="label text-info" for="membresía">Membresia</label>
+				</div>
+			</div>
+			<div class="row my-5 py-5">
+				<div class="col-12 d-flex justify-content-center">
+					<label class="form-label text-info" for="nivel">¿Cual es tu nivel actual?</label>
+					<input type="range" class="form-range bg-transparent mt-4" step="2" min="0" max="10" id="nivel">
+				</div>
+				<div class="col-12 d-flex justify-content-between">
+					<p class="text-white">Estoy empezando</p>
+					<h3 class="text-white">Soy Adam Ondra</h3>
+				</div>
+			</div>
+
+			<button class="btn btn-info" type="submit">Enviar formulario</button>
+
+		</form>
+	</section>
+
+
+	<footer class="text-center text-white bg-gradient mt-5">
+		<div class="container p-4 pb-0">
+			<section>
+
+				<div class="container text-center mt-5">
+
+					<div class="row mt-3">
+
+						<div class="col-xl-3 col-md-12 mb-4">
+							<img src="img/logo-Soul-Climb1.png"
+								class="rounded-circle bg-secondary shadow d-flex align-items-center justify-content-center mb-4 mx-auto"
+								height="150" width="150" loading="lazy" />
+						</div>
+
+
+						<div class="col-xl-3 col-md-4 mb-4">
+							<h6 class="text-uppercase fw-bold">Instalaciones</h6>
+							<hr class="mb-4 mt-0 mx-auto" />
+							<p>
+								<a href="Web.html#acordeon" class="text-decoration-none text-light">Boulder</a>
+							</p>
+							<p>
+								<a href="Web.html#acordeon" class="text-decoration-none text-light">Vias</a>
+							</p>
+							<p>
+								<a href="Web.html#acordeon" class="text-decoration-none text-light">Campus</a>
+							</p>
+							<p>
+								<a href="kids.html" class="text-decoration-none text-light">Zona SoulKids</a>
+							</p>
+						</div>
+
+
+						<div class="col-xl-3 col-md-4 mb-4">
+							<h6 class="text-uppercase fw-bold">Servicios</h6>
+							<hr class="mb-4 mt-0 mx-auto" />
+							<p>
+								<a href="Web.html#Cafetería" class="text-decoration-none text-light">Cafetería</a>
+							</p>
+							<p>
+								<a href="tarifas.html#alquiler" class="text-decoration-none text-light">Alquiler de
+									material</a>
+							</p>
+							<p>
+								<a href="#" class="text-decoration-none text-light">Tienda</a>
+							</p>
+							<p>
+								<a href="#" class="text-decoration-none text-light">Objetos perdidos</a>
+							</p>
+							<p>
+								<a href="#" class="text-decoration-none text-light">Targeta regalo</a>
+							</p>
+							<p>
+								<a href="kids.html#cumpleaños" class="text-decoration-none text-light">Cumpleaños</a>
+							</p>
+						</div>
+
+
+						<div class="col-xl-3 col-md-4 mb-4">
+							<h6 class="text-uppercase fw-bold">Contactanos</h6>
+							<hr class="mb-4 mt-0 mx-auto" />
+							<p><i class="bi bi-geo-alt"></i> C. Severo Ochoa, 19, 28914 Leganés, Madrid</p>
+							<p><i class="bi bi-envelope mr-3"></i> informacion@soulclimb.es</p>
+							<p><i class="bi bi-telephone"></i> 916 866 660</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<hr class="mb-4" />
+
+
+			<section class="mb-4 text-center">
+
+				<a class="btn btn-outline-light btn-floating m-1" href="https://facebook.com/" role="button"><i
+						class="bi bi-facebook"></i></i></a>
+
+
+				<a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/" role="button"><i
+						class="bi bi-twitter"></i></a>
+
+
+				<a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/soul_climb/"
+					role="button"><i class="bi bi-instagram"></i></a>
+
+
+				<a class="btn btn-outline-light btn-floating m-1" href="https://linkedin.com/" role="button"><i
+						class="bi bi-linkedin"></i></a>
+
+			</section>
+
+			<div class="bg-transparent d-flex justify-content-start">
+				<p class="mb-3">©</p>
+			</div>
+		</div>
+
+
+	</footer>
+
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>

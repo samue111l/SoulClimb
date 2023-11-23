@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		Web
+	</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="custom.css">
+</head>
+
+<body class="bg-dark bg-gradient">
+
+	<header>
+		<!--navegador nav, usamos la clase navbar, navbar tiene sombra por el "shadow",
+		 colapsa cuando es menor al tamaño grande(lg) por "navbar-expand-lg"-->
+		<nav class="navbar navbar-expand-xl shadow bg-black navbar-dark text-bg-dark">
+			<div class="container-fluid">
+				<!--navbar-brand se usa para crear el logotipo o el título de la barra de navegación-->
+				<a class="navbar-brand" href="Web.html"><img src="img/logo-Soul-Climb1.png" height="60px"
+						class="mx-xl-5"></a>
+				<!--button class="navbar-toggler" se usa para cambiar entre la vista colapsada y expandida de la barra de navegación-->
+				<!--data-bs-toggle="collapse" indica que van a hacer los elementos(en este caso colapsarse) y data-bs-target indica que elementos
+				se van a hacerlo(por eso lo unimos a un id conectado con el div que contendra los elementos del navbar que queremos que desaparezcan)-->
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#elementos">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<!--colapsa todo el div-->
+				<div class="collapse navbar-collapse" id="elementos">
+					<ul class="navbar-nav">
+						<!--nav-item para introducir un enlace dentro, con un enlace activo-->
+						<li class="nav-item">
+							<a class="nav-link active" href="Web.html">A escalar!</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="tarifas.html">Tarifas</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="kids.html">Kids</a>
+						</li>
+						<!--clase dropdown-->
+						<li class="nav-item dropdown d-flex align-items-center">
+							<!--por dropdown-toggle al clicar este botón se despliega el menu-->
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+								Servicios
+							</a>
+							<!--nueva lista con dropdown-menu y dropdown-items-->
+							<ul class="dropdown-menu bg-black text-bg-dark bg-gradient">
+								<li><a class="dropdown-item text-white" href="#">Cafetería</a></li>
+								<li><a class="dropdown-item text-white" href="tarifas.html#alquiler">Alquiler de
+										material</a></li>
+								<li><a class="dropdown-item text-white" href="#">Tienda</a></li>
+								<li><a class="dropdown-item text-white" href="#">Objetos perdidos</a></li>
+								<!--del main-->
+								<li><a class="dropdown-item text-white" href="#">Tarjeta de regalo</a></li>
+								<!--del tarifa-->
+
+								<li><a class="dropdown-item text-white" href="kids.html#cumpleaños">Cumpleaños</a></li>
+								<!--del kids-->
+							</ul>
+						</li>
+				</div>
+				<!--no colapsa todo el div-->
+				<div class="navbar-collapse">
+					<!--nav-item para introducir un enlace dentro, con un enlace desactivo, con el tabindex="-1" el raton no puede pasar por encima-->
+					<ul class="navbar-nav">
+						<li class="nav-item" data-bs-toggle="show">
+							<p class="text-white-50" href="#">Antiguo Indoorwall
+								Leganés, nuevo Soul Climb</p>
+						</li>
+					</ul>
+				</div>
+				<!--colapsa todo el div, flex-row-reverse se usa para pegar el elemento a la derecha-->
+				<div class="collapse navbar-collapse my-2 flex-row-reverse" id="elementos">
+					<!--formulario-->
+					<form class="d-flex">
+						<input class="form-control" type="search" placeholder="Buscador">
+						<button class="btn hover" type="submit"><i class="bi bi-search text-light"></i></button>
+					</form>
+				</div>
+
+			</div>
+		</nav>
+	</header>
+
+
+
+	<!--utiliza d-flex align-items-center para centrar el texto en el centro de la imagen-->
+	<div class="background-image d-flex align-items-center justify-content-center shadow">
+		<img src="img/web/imagenprincipal.jpg" class="shadow img-fluid">
+	</div>
+
+	<section class="container-fluid">
+
+		<div class="container my-5 pt-5">
+			<h1 class="text-warning">
+				«La pasión por lo nuestro no se puede COMPRAR, pero sí COMPARTIR»
+			</h1>
+			<h2 class="text-light">Equipo Soul Climb</h2>
+		</div>
+
+
+
+		<div class="bg-transparent mx-5 border border-2 rounded-3">
+			<div class="row">
+				<div class="col-lg-6">
+					<div id="carousel1" class="carousel slide" data-bs-ride="carousel" data-bs-pause="none">
+						<div class="carousel-inner">
+							<div class="carousel-item active" data-bs-interval="5000">
+								<img src="img/web/carrousel/carrousel1(32).jpg" class="d-block w-100 rounded">
+							</div>
+							<div class="carousel-item" data-bs-interval="5000">
+								<img src="img/web/carrousel/carrousel2(32).jpg" class="d-block w-100 rounded">
+							</div>
+							<div class="carousel-item" data-bs-interval="5000">
+								<img src="img/web/carrousel/carrousel3(32).jpg" class="d-block w-100 rounded">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 d-flex justify-content-center align-items-center">
+					<div id="carousel2" class="carousel slide" data-bs-ride="carousel" data-bs-pause="none">
+						<div class="carousel-inner text-center">
+							<div class="carousel-item active" data-bs-interval="5000">
+								<h1 class="text-white">¡Escala!</h1>
+							</div>
+							<div class="carousel-item" data-bs-interval="5000">
+								<h1 class="text-white">¡Entrena!</h1>
+							</div>
+							<div class="carousel-item" data-bs-interval="5000">
+								<h1 class="text-white">¡Disfruta!</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="container my-5 pt-5 border-white">
+			<div class="row bg-transparent">
+
+				<div class="            col-xl-6 my-5">
+					<div class="row">
+						<div class="col-xl-12 col-lg-6 col-xs-12">
+							<h1 class="text-center text-light">¿Te interesa ser socio?</h1>
+						</div>
+						<div class="d-grid col-xl-12 col-lg-6 col-xs-12 mt-2">
+							<a href="tarifas.html#formulario"
+								class="btn btn-outline-warning">Completa
+								el formulario</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-xl-6 my-5">
+					<div class="row">
+						<div class="col-xl-12 col-lg-6 col-xs-12">
+							<h1 class="text-center text-warning">Conoce nuestros precios</h1>
+						</div>
+						<div class="d-grid col-xl-12 col-lg-6 col-xs-12 mt-2">
+							<a href="tarifas.html"
+								class="btn btn-outline-light">Tarifas</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-xl-6 my-5">
+					<div class="row">
+						<div class="col-xl-12 col-lg-6 col-xs-12">
+							<h1 class="text-center text-light">Para los más peques</h1>
+						</div>
+						<div class="d-grid col-xl-12 col-lg-6 col-xs-12 mt-2">
+							<a href="kids.html"
+								class="btn btn-outline-warning">Accede
+								a la zona SoulKids</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-xl-6 my-5">
+					<div class="row">
+						<div class="col-xl-12 col-lg-6 col-xs-12">
+							<h1 class="text-center text-warning">Encuéntranos</h1>
+						</div>
+						<div class="d-grid col-xl-12 col-lg-6 col-xs-12 mt-2">
+							<a href="#mapa"
+								class="btn btn-outline-light">Ir
+								al mapa</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container my-5 pt-5 table-responsive">
+			<h1 class="text-light text-center">
+				<i class="bi bi-calendar"></i>
+				Horario
+			</h1>
+			<table class="table table-striped table-hover table-dark my-5 border border-5 border-dark rounded-2">
+				<thead>
+					<tr>
+						<th scope="col">Día</th>
+						<th scope="col">Apertura</th>
+						<th scope="col">Cierre</th>
+					</tr>
+				</thead>
+				<tbody class="table-group-divider border-warning">
+					<tr>
+						<td>Lunes</th>
+						<td>10:00 am</th>
+						<td>10:00 pm</th>
+					</tr>
+					<tr>
+						<td>Martes</th>
+						<td>10:00 am</th>
+						<td>10:00 pm</th>
+					</tr>
+					<tr>
+						<td>Miércoles</th>
+						<td>10:00 am</th>
+						<td>10:00 pm</th>
+					</tr>
+					<tr>
+						<td>Jueves</th>
+						<td>10:00 am</th>
+						<td>10:00 pm</th>
+					</tr>
+					<tr>
+						<td>Viernes</th>
+						<td>10:00 am</th>
+						<td>10:00 pm</th>
+					</tr>
+					<tr>
+						<td>Sábado</th>
+						<td>10:00 am</th>
+						<td>10:00 pm</th>
+					</tr>
+					<tr>
+						<td>Domingo</th>
+						<td>10:00 am</th>
+						<td>8:00 pm</th>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+
+
+		<div class="container my-5 pt-5" id="acordeon">
+			<h1 class="text-warning">
+				Escala a tu manera
+			</h1>
+
+			<div class="accordion accordion-flush my-4">
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="primerencabezado">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+							data-bs-target="#colapso-acordeon1">
+							Boulder
+						</button>
+					</h2>
+					<div id="colapso-acordeon1" class="accordion-collapse collapse" data-bs-parent="#acordeon">
+						<div class="accordion-body">
+							En el rocódromo Soul climb, contamos con una zona de boulder con todo tipo de superficies
+							verticales y 3D.
+							Desniveles con las presas más modernas que satisfacen hasta los gustos más exigentes, ¿Te lo
+							vas a perder?
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="segundoencabezado">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+							data-bs-target="#colapso-acordeon2">
+							Vias
+						</button>
+					</h2>
+					<div id="colapso-acordeon2" class="accordion-collapse collapse" data-bs-parent="#acordeon">
+						<div class="accordion-body">
+							Contamos con una superficie de mas de 1.500 m para escalar con cuerda, de todos lo niveles
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="tercerencabezado">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+							data-bs-target="#colapso-acordeon3">
+							Campus
+						</button>
+					</h2>
+					<div id="colapso-acordeon3" class="accordion-collapse collapse" data-bs-parent="#acordeon">
+						<div class="accordion-body">
+							¡Descubre nuestra zona de campus en nuestro rocodromo! Aquí encontrarás un espacio diseñado
+							para desafiar y fortalecer tus habilidades de escalada.
+							Nuestra pared de campus está equipada con una variedad de presas y agarres desafiantes que
+							te permitirán trabajar en tu fuerza, técnica y coordinación.
+							Tanto si eres un escalador experimentado como si estás empezando, nuestro campus es el lugar
+							ideal para mejorar tus habilidades
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container my-5 pt-5" id="Cafetería">
+			<h1 class="text-white text-center my-5">
+				La Carta
+			</h1>
+			<ul class="nav nav-tabs bg-transparent">
+				<li class="nav-item">
+					<a class="nav-link text-warning" data-bs-toggle="tab" data-bs-target="#carta">Primera página</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-warning" data-bs-toggle="tab" data-bs-target="#carta2">Segunda página</a>
+				</li>
+			</ul>
+
+			<div class="tab-content text-light my-5" id="myTabContent">
+
+				<div class="tab-pane fade show active" id="carta" role="tabpanel">
+					<div class="row d-flex align-items-center justify-content-around">
+						<div class="col-xl-6 col-lg-12 text-center">
+							<img width="500" height="700"
+								src="https://soulclimbleganes.files.wordpress.com/2023/10/carta-soul-1.jpg?w=724"
+								srcset="https://soulclimbleganes.files.wordpress.com/2023/10/carta-soul-1.jpg?w=724 724w, https://soulclimbleganes.files.wordpress.com/2023/10/carta-soul-1.jpg?w=106 106w, https://soulclimbleganes.files.wordpress.com/2023/10/carta-soul-1.jpg?w=212 212w, https://soulclimbleganes.files.wordpress.com/2023/10/carta-soul-1.jpg?w=768 768w, https://soulclimbleganes.files.wordpress.com/2023/10/carta-soul-1.jpg 1414w">
+						</div>
+						<div class="col-xl-6 col-lg-12 my-4 mt-5 text-lg-start text-center">
+							<h1 class="text-warning">Para Compartir</h1>
+							Compartir es disfrutar, y en Soul Climb, te ofrecemos una selección de platos
+							pensados para compartir con amigos y familiares. Desde exquisitas tapas hasta platos más
+							elaborados,
+							hay algo para todos.
+
+							<h1 class="text-warning my-4 mt-5">Algo Ligero</h1>
+							Si buscas una opción más ligera pero llena de sabor, no te pierdas nuestra
+							sección "Algo Ligero". Aquí encontrarás opciones saludables y deliciosas que satisfarán tu
+							apetito
+							sin sentirte pesado.
+
+							<h1 class="text-warning my-4 mt-5">Para los Más Peques</h1>
+							No olvidamos a los más pequeños escaladores. Hemos creado una sección especial en nuestra
+							carta, "Merienda Soul Kids", con opciones pensadas para los niños, para que disfruten de su
+							comida
+							de la mejor manera.
+						</div>
+
+					</div>
+				</div>
+				<div class="tab-pane fade" id="carta2" role="tabpanel">
+					<div class="row d-flex align-items-center justify-content-around flex-xl-row-reverse">
+						<div class="col-xl-6 col-lg-12 text-center">
+							<img width="500" height="700"
+								src="https://soulclimbleganes.files.wordpress.com/2023/10/carta-soul-2.jpg?w=724"
+								srcset="https://soulclimbleganes.files.wordpress.com/2023/10/carta-soul-2.jpg?w=724 724w, https://soulclimbleganes.files.wordpress.com/2023/10/carta-soul-2.jpg?w=106 106w, https://soulclimbleganes.files.wordpress.com/2023/10/carta-soul-2.jpg?w=212 212w, https://soulclimbleganes.files.wordpress.com/2023/10/carta-soul-2.jpg?w=768 768w, https://soulclimbleganes.files.wordpress.com/2023/10/carta-soul-2.jpg 1414w">
+						</div>
+						<div class="col-xl-6 col-lg-12  text-lg-start text-center">
+							<h1 class="text-warning my-4 mt-5">Bocadillos</h1>
+							Si eres un amante de los bocadillos, estás en el lugar correcto. Nuestra selección de
+							bocadillos es
+							variada y deliciosa. Desde opciones clásicas hasta creaciones únicas, estamos seguros de que
+							encontrarás el bocadillo perfecto para satisfacer tu hambre.
+
+							<h1 class="text-warning my-4 mt-5">Hamburguesas</h1>
+							¿Eres un apasionado de las hamburguesas? En Soul Climb, te servimos
+							hamburguesas que son una obra maestra. Jugosas, sabrosas y acompañadas de tus ingredientes
+							favoritos. ¡Prueba nuestras hamburguesas y experimenta el sabor en su máxima expresión!
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+
+		</div>
+
+		<div class="container my-5 pt-5">
+			<div class="container justify-content-center my-5 pt-5" id="mapa">
+				<h1 class="text-light text-center">
+					<i class="bi bi-map"></i>
+					¿DONDE PUEDES ENCONTRARNOS?
+				</h1>
+				<div class="ratio ratio-16x9 my-5">
+					<iframe class="mx-auto d-block"
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3042.005654017408!2d-3.7507332893128145!3d40.320032061401456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd418a06039072f1%3A0x52de3c72afaf47ef!2sRoc%C3%B3dromo%20Escalada%20Soul%20Climb%20Legan%C3%A9s!5e0!3m2!1ses!2ses!4v1698797539018!5m2!1ses!2ses"
+						width="600px" height="500px" style="border:0;" allowfullscreen="" loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+
+			</div>
+	</section>
+
+
+	<footer class="text-center text-white bg-gradient">
+		<div class="container p-4 pb-0">
+			<section>
+
+				<div class="container text-center mt-5">
+
+					<div class="row mt-3">
+
+						<div class="col-xl-3 col-md-12 mb-4">
+							<img src="img/logo-Soul-Climb1.png"
+								class="rounded-circle bg-secondary shadow d-flex align-items-center justify-content-center mb-4 mx-auto"
+								height="150" width="150" loading="lazy" />
+						</div>
+
+
+						<div class="col-xl-3 col-md-4 mb-4">
+							<h6 class="text-uppercase fw-bold">Instalaciones</h6>
+							<hr class="mb-4 mt-0 mx-auto" />
+							<p>
+								<a href="Web.html#acordeon" class="text-decoration-none text-light">Boulder</a>
+							</p>
+							<p>
+								<a href="Web.html#acordeon" class="text-decoration-none text-light">Vias</a>
+							</p>
+							<p>
+								<a href="Web.html#acordeon" class="text-decoration-none text-light">Campus</a>
+							</p>
+							<p>
+								<a href="kids.html" class="text-decoration-none text-light">Zona SoulKids</a>
+							</p>
+						</div>
+
+
+						<div class="col-xl-3 col-md-4 mb-4">
+							<h6 class="text-uppercase fw-bold">Servicios</h6>
+							<hr class="mb-4 mt-0 mx-auto" />
+							<p>
+								<a href="Web.html#Cafetería" class="text-decoration-none text-light">Cafetería</a>
+							</p>
+							<p>
+								<a href="tarifas.html#alquiler" class="text-decoration-none text-light">Alquiler de
+									material</a>
+							</p>
+							<p>
+								<a href="#" class="text-decoration-none text-light">Tienda</a>
+							</p>
+							<p>
+								<a href="#" class="text-decoration-none text-light">Objetos perdidos</a>
+							</p>
+							<p>
+								<a href="#" class="text-decoration-none text-light">Targeta regalo</a>
+							</p>
+							<p>
+								<a href="kids.html#cumpleaños" class="text-decoration-none text-light">Cumpleaños</a>
+							</p>
+						</div>
+
+
+						<div class="col-xl-3 col-md-4 mb-4">
+							<h6 class="text-uppercase fw-bold">Contactanos</h6>
+							<hr class="mb-4 mt-0 mx-auto" />
+							<p><i class="bi bi-geo-alt"></i> C. Severo Ochoa, 19, 28914 Leganés, Madrid</p>
+							<p><i class="bi bi-envelope mr-3"></i> informacion@soulclimb.es</p>
+							<p><i class="bi bi-telephone"></i> 916 866 660</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<hr class="mb-4" />
+
+
+			<section class="mb-4 text-center">
+
+				<a class="btn btn-outline-light btn-floating m-1" href="https://facebook.com/" role="button"><i
+						class="bi bi-facebook"></i></i></a>
+
+
+				<a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/" role="button"><i
+						class="bi bi-twitter"></i></a>
+
+
+				<a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/soul_climb/"
+					role="button"><i class="bi bi-instagram"></i></a>
+
+
+				<a class="btn btn-outline-light btn-floating m-1" href="https://linkedin.com/" role="button"><i
+						class="bi bi-linkedin"></i></a>
+
+			</section>
+
+			<div class="bg-transparent d-flex justify-content-start">
+				<p class="mb-3">© 2023</p>
+			</div>
+		</div>
+
+
+	</footer>
+
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>

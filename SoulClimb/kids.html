@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		Web
+	</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body class="bg-dark bg-gradient">
+
+	<header>
+		<!--navegador nav, usamos la clase navbar, navbar tiene sombra por el "shadow",
+		 colapsa cuando es menor al tamaño grande(lg) por "navbar-expand-lg"-->
+		<nav class="navbar navbar-expand-xl shadow bg-black navbar-dark text-bg-dark">
+			<div class="container-fluid">
+				<!--navbar-brand se usa para crear el logotipo o el título de la barra de navegación-->
+				<a class="navbar-brand" href="Web.html"><img src="img/logo-Soul-Climb1.png" height="60px"
+						class="mx-xl-5"></a>
+				<!--button class="navbar-toggler" se usa para cambiar entre la vista colapsada y expandida de la barra de navegación-->
+				<!--data-bs-toggle="collapse" indica que van a hacer los elementos(en este caso colapsarse) y data-bs-target indica que elementos
+				se van a hacerlo(por eso lo unimos a un id conectado con el div que contendra los elementos del navbar que queremos que desaparezcan)-->
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#elementos">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<!--colapsa todo el div-->
+				<div class="collapse navbar-collapse" id="elementos">
+					<ul class="navbar-nav">
+						<!--nav-item para introducir un enlace dentro, con un enlace activo-->
+						<li class="nav-item">
+							<a class="nav-link" href="Web.html">A escalar!</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="tarifas.html">Tarifas</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="kids.html">Kids</a>
+						</li>
+						<!--clase dropdown-->
+						<li class="nav-item dropdown d-flex align-items-center">
+							<!--por dropdown-toggle al clicar este botón se despliega el menu-->
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+								Servicios
+							</a>
+							<!--nueva lista con dropdown-menu y dropdown-items-->
+							<ul class="dropdown-menu bg-black text-bg-dark bg-gradient">
+								<li><a class="dropdown-item text-white" href="#">Cafetería</a></li>
+								<li><a class="dropdown-item text-white" href="tarifas.html#alquiler">Alquiler de
+										material</a></li>
+								<li><a class="dropdown-item text-white" href="#">Tienda</a></li>
+								<li><a class="dropdown-item text-white" href="#">Objetos perdidos</a></li>
+								<!--del main-->
+								<li><a class="dropdown-item text-white" href="#">Tarjeta de regalo</a></li>
+								<!--del tarifa-->
+
+								<li><a class="dropdown-item text-white" href="kids.html#cumpleaños">Cumpleaños</a></li>
+								<!--del kids-->
+							</ul>
+						</li>
+				</div>
+				<!--no colapsa todo el div-->
+				<div class="navbar-collapse">
+					<!--nav-item para introducir un enlace dentro, con un enlace desactivo, con el tabindex="-1" el raton no puede pasar por encima-->
+					<ul class="navbar-nav">
+						<li class="nav-item" data-bs-toggle="show">
+							<a class="nav-link disabled text-white-50" href="#" tabindex="-1">Antiguo Indoorwall
+								Leganés, nuevo Soul Climb</a>
+						</li>
+					</ul>
+				</div>
+				<!--colapsa todo el div, flex-row-reverse se usa para pegar el elemento a la derecha-->
+				<div class="collapse navbar-collapse my-2 flex-row-reverse" id="elementos">
+					<!--formulario-->
+					<form class="d-flex">
+						<input class="form-control" type="search" placeholder="Buscador">
+						<button class="btn hover" type="submit"><i class="bi bi-search text-light"></i></button>
+					</form>
+				</div>
+
+			</div>
+		</nav>
+	</header>
+
+	<section>
+		<div id="carrousel3" class="carousel slide carousel-fade">
+			<div class="carousel-indicators">
+				<button type="button" data-bs-target="#carrousel3" data-bs-slide-to="0" aria-current="true"
+					aria-label="Slide 1"></button>
+				<button type="button" data-bs-target="#carrousel3" data-bs-slide-to="1" class="active"
+					aria-label="Slide 2"></button>
+				<button type="button" data-bs-target="#carrousel3" data-bs-slide-to="2" aria-label="Slide 3"></button>
+			</div>
+			<div class="carousel-inner">
+				<div class="carousel-item">
+					<img src="img/kids/carrousel2/carrousel1.jpg" width="300px" class="d-block w-100">
+				</div>
+				<div class="carousel-item active">
+					<img src="img/kids/carrousel2/carrousel2.jpg" width="300px" class="d-block w-100 active">
+				</div>
+				<div class="carousel-item">
+					<img src="img/kids/carrousel2/carrousel3.jpg" width="300px" class="d-block w-100">
+				</div>
+			</div>
+
+			<button class="carousel-control-prev" type="button" data-bs-target="#carrousel3" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carrousel3" data-bs-slide="next">
+				<span class="carousel-control-next-icon"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+
+
+
+		<div class="container my-5 text-light">
+			<div class="row">
+				<div class="col-xl-6 col-md-12">
+					<div class="row">
+						<div class="col-xl-12 col-lg-6 col-md-6 d-flex align-items-center">
+							<img src="img/kids/zona kids.jpg"
+								class="rounded-circle bg-secondary shadow d-flex align-items-center justify-content-center mt-5 mx-auto"
+								height="250" width="250" loading="lazy" />
+						</div>
+
+						<div class="col-xl-12 col-lg-6 col-md-6 text-xl-center text-md-start text-sm-center mt-5">
+							<h1 class="text-center">Zona Soul Kids</h1>
+							<h2 class="text-success">¡Descubre Soul Kids, la zona perfecta para
+								escaladores jóvenes!</h2>
+							<p>En nuestro rocodromo, Soul Kids ofrece emocionantes rutas de escalada para niños mayores
+								de 4
+								años, tanto en vías como en boulder. Nuestra instalación está diseñada para garantizar
+								la
+								diversión y la seguridad de los más pequeños mientras desarrollan sus habilidades de
+								escalada.
+								¡Una experiencia emocionante para niños y padres por igual!</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-6 col-md-12">
+					<div class="row flex-row-reverse">
+						<div class="col-xl-12 col-lg-6 col-md-6 d-flex align-items-center">
+							<img src="img/kids/clases kids.jpg"
+								class="rounded-circle bg-secondary shadow d-flex align-items-center justify-content-center mt-5 mx-auto"
+								height="250" width="250" loading="lazy" />
+						</div>
+
+						<div class="col-xl-12 col-lg-6 col-md-6 text-xl-center text-md-end text-sm-center mt-5">
+							<h1 class="text-center">Clases</h1>
+							<h2 class="text-success">En Soul Climb, ofrecemos clases de escalada diseñadas para los más
+								jóvenes</h2>
+							<p>Nuestros instructores capacitados ayudarán a los niños a desarrollar sus habilidades
+								de escalada de manera segura y divertida. Con rutas adaptadas a su nivel,
+								Soul Kids es el lugar perfecto para que los niños descubran el emocionante mundo de la
+								escalada</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12">
+					<div class="row" id="cumpleaños">
+						<div class="col-xl-12 col-lg-6 col-md-6 d-flex align-items-center">
+							<img src="img/kids/cumpleaños.jpg"
+								class="rounded-circle bg-secondary shadow d-flex align-items-center justify-content-center mt-5 mx-auto"
+								height="250" width="250" loading="lazy" />
+						</div>
+
+						<div
+							class="col-xl-12 col-lg-6 col-md-6 text-xl-center text-md-start text-sm-center mt-5">
+							<h1 class="text-center">Cumpleaños</h1>
+							<h2 class="text-success">¡Celebra cumpleaños en Soul Climb y haz que sea un día inolvidable!
+							</h2>
+							<p>Ofrecemos opciones especiales para celebrar cumpleaños con nosotros,
+								donde los niños y sus amigos pueden disfrutar de la escalada y la diversión
+								en un entorno seguro y emocionante. ¡Contáctanos para obtener más información y
+								reservar tu celebración de cumpleaños en Soul Climb!</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<footer class="text-center text-white bg-gradient">
+		<div class="container p-4 pb-0">
+			<section>
+
+				<div class="container text-center mt-5">
+
+					<div class="row mt-3">
+
+						<div class="col-xl-3 col-md-12 mb-4">
+							<img src="img/logo-Soul-Climb1.png"
+								class="rounded-circle bg-secondary shadow d-flex align-items-center justify-content-center mb-4 mx-auto"
+								height="150" width="150" loading="lazy" />
+						</div>
+
+
+						<div class="col-xl-3 col-md-4 mb-4">
+							<h6 class="text-uppercase fw-bold">Instalaciones</h6>
+							<hr class="mb-4 mt-0 mx-auto" />
+							<p>
+								<a href="Web.html#acordeon" class="text-decoration-none text-light">Boulder</a>
+							</p>
+							<p>
+								<a href="Web.html#acordeon" class="text-decoration-none text-light">Vias</a>
+							</p>
+							<p>
+								<a href="Web.html#acordeon" class="text-decoration-none text-light">Campus</a>
+							</p>
+							<p>
+								<a href="kids.html" class="text-decoration-none text-light">Zona SoulKids</a>
+							</p>
+						</div>
+
+
+						<div class="col-xl-3 col-md-4 mb-4">
+							<h6 class="text-uppercase fw-bold">Servicios</h6>
+							<hr class="mb-4 mt-0 mx-auto" />
+							<p>
+								<a href="Web.html#Cafetería" class="text-decoration-none text-light">Cafetería</a>
+							</p>
+							<p>
+								<a href="tarifas.html#alquiler" class="text-decoration-none text-light">Alquiler de
+									material</a>
+							</p>
+							<p>
+								<a href="#" class="text-decoration-none text-light">Tienda</a>
+							</p>
+							<p>
+								<a href="#" class="text-decoration-none text-light">Objetos perdidos</a>
+							</p>
+							<p>
+								<a href="#" class="text-decoration-none text-light">Targeta regalo</a>
+							</p>
+							<p>
+								<a href="kids.html#cumpleaños" class="text-decoration-none text-light">Cumpleaños</a>
+							</p>
+						</div>
+
+
+						<div class="col-xl-3 col-md-4 mb-4">
+							<h6 class="text-uppercase fw-bold">Contactanos</h6>
+							<hr class="mb-4 mt-0 mx-auto" />
+							<p><i class="bi bi-geo-alt"></i> C. Severo Ochoa, 19, 28914 Leganés, Madrid</p>
+							<p><i class="bi bi-envelope mr-3"></i> informacion@soulclimb.es</p>
+							<p><i class="bi bi-telephone"></i> 916 866 660</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<hr class="mb-4" />
+
+
+			<section class="mb-4 text-center">
+
+				<a class="btn btn-outline-light btn-floating m-1" href="https://facebook.com/" role="button"><i
+						class="bi bi-facebook"></i></i></a>
+
+
+				<a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/" role="button"><i
+						class="bi bi-twitter"></i></a>
+
+
+				<a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/soul_climb/"
+					role="button"><i class="bi bi-instagram"></i></a>
+
+
+				<a class="btn btn-outline-light btn-floating m-1" href="https://linkedin.com/" role="button"><i
+						class="bi bi-linkedin"></i></a>
+
+			</section>
+
+			<div class="bg-transparent d-flex justify-content-start">
+				<p class="mb-3">© 2023</p>
+			</div>
+		</div>
+
+
+	</footer>
+
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>

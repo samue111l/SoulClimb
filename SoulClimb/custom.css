@@ -1,0 +1,32 @@
+/*Web*/
+.background-image {
+    width: 100%;
+    height: 102vh;
+    /* Establece la altura al 100% de la ventana */
+    background-image: url("img/web/imagenprincipal.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+#carousel2 h1 {
+    font-size: 5em;
+}
+
+/*tarifas*/
+.list-group-item {
+    margin-right: 1.8em;
+}
+
+label {
+    position: absolute;
+    margin-top: -2em;
+    font-size: 1.3em;
+    transition: transform .2s ease-in-out;
+}
+
+input:focus+label,
+input:valid+label,
+input[readonly]+label,
+select+label {
+    transform: translateY(-26px);
+}
